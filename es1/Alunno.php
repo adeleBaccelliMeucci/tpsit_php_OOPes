@@ -1,6 +1,6 @@
 <?php
 
-class Alunno{
+class Alunno implements jsonserializable{
     protected $nome;
     protected $cognome;
     protected $eta;
@@ -36,6 +36,14 @@ class Alunno{
         echo "<p>nome: " . $this -> nome . ", cognome: " . $this -> cognome . ", età: " . $this -> eta ."</p>";
     }
 
+    public function jsonSerialize(): array {
+        return[
+            'nome' => $this->name,
+            'cognome' => $this->cognome,
+            'eta' => $this->eta,
+
+        ];
+    }
 }
 
 
