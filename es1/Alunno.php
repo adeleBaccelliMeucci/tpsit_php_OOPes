@@ -38,7 +38,7 @@ class Alunno implements jsonserializable{
 
     public function jsonSerialize(): array {
         return[
-            'nome' => $this->name,
+            'nome' => $this->nome,
             'cognome' => $this->cognome,
             'eta' => $this->eta,
 
